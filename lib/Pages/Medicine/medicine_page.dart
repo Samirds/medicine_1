@@ -1,18 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medicine_1/Pages/profile_page.dart';
-import 'feed_page.dart';
-import 'home_page.dart';
-import 'settings_page_view.dart';
 
-class MainPageBody extends StatefulWidget {
-  const MainPageBody({Key? key}) : super(key: key);
+import '../home_page.dart';
+
+class MedicinePage extends StatefulWidget {
+  const MedicinePage({Key? key}) : super(key: key);
 
   @override
-  _MainPageBodyState createState() => _MainPageBodyState();
+  State<MedicinePage> createState() => _MedicinePageState();
 }
 
-class _MainPageBodyState extends State<MainPageBody> {
-  // we are using this because of custome searchbar in appbar
+class _MedicinePageState extends State<MedicinePage> {
   Icon customIcon = Icon(Icons.search);
   Widget customeSearchBar = Container(
     child: Column(
@@ -125,10 +123,10 @@ class _MainPageBodyState extends State<MainPageBody> {
           ),
           body: TabBarView(children: [
             //SingleChildScrollView(child: HomePage()),
-            HomePage(),
-            FeedPage(),
-            ProfilePage(),
-            SettingsPage(),
+            //HomePage(),
+            //FeedPage(),
+            //ProfilePage(),
+            //SettingsPage(),
           ]),
         ),
       ),
