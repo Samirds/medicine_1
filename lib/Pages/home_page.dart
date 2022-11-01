@@ -4,9 +4,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medicine_1/Pages/home/shop_by_category.dart';
 import 'package:medicine_1/utils/caterories_list_view.dart';
-import 'package:medicine_1/utils/colors.dart';
+import 'package:medicine_1/utils/app_colors.dart';
 
-import '../utils/grid_view.dart';
+import '../widgets/grid_view.dart';
+import '../widgets/image_and_text_widget.dart';
 import 'home/home_page_view.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,7 +49,7 @@ class _HomePageState extends State<HomePage> {
         const HomePageView(),
         ////////---------------------------------------------------------- Explore categories Start ------------------------------------------------------------------------------------>
         Container(
-          height: 130,
+          height: 133,
           // width: 350,
           color: Color.fromARGB(255, 250, 248, 225),
           margin: EdgeInsets.only(left: 8, top: 10, right: 8),
@@ -72,120 +73,38 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               Row(
-                children: [
-                  const SizedBox(
+                children: const [
+                  SizedBox(
                     width: 35,
                   ),
                   // ------------------------------------------------------------Stack 1 (Explore categories) ---------------------------------------------------------------------------
-                  Stack(children: [
-                    Container(
-                      height: 82,
-                      width: 105,
-                      color: Color.fromARGB(255, 250, 248, 225),
-                      //color: Colors.black,
-                      child: const Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Text(
-                            "Consult Doctor",
-                            style: TextStyle(
-                                fontSize: 12,
-                                color: Color.fromARGB(255, 39, 43, 34)),
-                          )),
-                    ),
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Container(
-                          // padding: EdgeInsets.all(100),
-                          //margin: EdgeInsets.all(1),
-                          //color: Colors.white,
-                          height: 68,
-                          width: 105,
-                          //color: Colors.white,
-                          decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white,
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage("assets/images/pharma.jpg")))),
-                    ),
-                  ]),
+
+                  ImageAndTextWidget(
+                    imgPath: "assets/images/pharma.jpg",
+                    text: "Consult Doctor",
+                  ),
+
                   //------------------------------------------------------------------------------------------------------------------------------
 
-                  const SizedBox(
+                  SizedBox(
                     width: 5,
                   ),
                   //----------------------------------------------------- Stack 2 (Explore categories) --------------------------------------------------------------
-                  Stack(children: [
-                    Container(
-                      height: 82,
-                      width: 105,
-                      color: Color.fromARGB(255, 250, 248, 225),
-                      //color: Colors.black,
-                      child: const Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Text(
-                            "Medicine",
-                            style: TextStyle(
-                                fontSize: 12,
-                                color: Color.fromARGB(255, 39, 43, 34)),
-                          )),
-                    ),
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Container(
-                          // padding: EdgeInsets.all(100),
-                          //margin: EdgeInsets.all(1),
-                          //color: Colors.white,
-                          height: 68,
-                          width: 105,
-                          //color: Colors.white,
-                          decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.black,
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage(
-                                      "assets/images/medicine.jpg")))),
-                    ),
-                  ]),
+
+                  ImageAndTextWidget(
+                    imgPath: "assets/images/medicine.jpg",
+                    text: "Medicine",
+                  ),
                   // ---------------------------------------------------------------------------------------------------------------------------------
-                  const SizedBox(
+                  SizedBox(
                     width: 5,
                   ),
                   //-----------------------------------------------------------Stack 3 (Explore categories) -----------------------------------------------------------------------
-                  Stack(children: [
-                    Container(
-                      height: 82,
-                      width: 105,
-                      color: Color.fromARGB(255, 250, 248, 225),
-                      //color: Colors.black,
-                      child: const Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Text(
-                            "Lab Test",
-                            style: TextStyle(
-                                fontSize: 12,
-                                color: Color.fromARGB(255, 39, 43, 34)),
-                          )),
-                    ),
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Container(
-                          // padding: EdgeInsets.all(100),
-                          //margin: EdgeInsets.all(1),
-                          //color: Colors.white,
-                          height: 68,
-                          width: 105,
-                          //color: Colors.white,
-                          decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white,
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage("assets/images/lab.jpg")))),
-                    ),
-                  ]),
+
+                  ImageAndTextWidget(
+                    imgPath: "assets/images/lab.jpg",
+                    text: "Lab Test",
+                  ),
                   //--------------------------------------------------------------------------------------------------------
                 ],
               )
@@ -281,7 +200,7 @@ class _HomePageState extends State<HomePage> {
                             child: Center(
                                 child: Text(
                               "Baby's Product",
-                              style: TextStyle(color: AppColors.textColor),
+                              style: TextStyle(color: AppColors.mainTextColor),
                             )),
                           ),
                         ),

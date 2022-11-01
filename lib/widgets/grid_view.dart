@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medicine_1/utils/colors.dart';
+import 'package:medicine_1/utils/app_colors.dart';
 
 class GtidViewPage extends StatefulWidget {
   const GtidViewPage({Key? key}) : super(key: key);

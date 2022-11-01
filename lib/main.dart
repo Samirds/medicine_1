@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicine_1/Pages/Medicine/medicine_page.dart';
-import 'package:medicine_1/utils/grid_view.dart';
+import 'package:medicine_1/widgets/grid_view.dart';
 import 'Pages/home_page.dart';
 import 'Pages/main_page_bofdy.dart';
 
