@@ -18,7 +18,7 @@ class _GtidViewPageState extends State<GtidViewPage> {
         color: AppColors.containerColor,
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
+              crossAxisCount: 3,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
               mainAxisExtent: 100,
@@ -28,12 +28,11 @@ class _GtidViewPageState extends State<GtidViewPage> {
             itemCount: 10,
             itemBuilder: (context, index) {
               return ClipRRect(
-                borderRadius: BorderRadius.circular(15),
                 child: Container(
                   color: Colors.white,
-                  child: Image(
+                  child: const Image(
                     image: AssetImage(
-                      "assets/images/med2.jpg",
+                      "assets/icons/doctor_icon.png",
                     ),
                     fit: BoxFit.cover,
                   ),
